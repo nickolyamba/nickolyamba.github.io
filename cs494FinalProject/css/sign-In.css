@@ -1,0 +1,97 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin{
+  max-width: 350px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  /*border: solid gray 1px;*/
+  background-color: #eee;
+  border-top-right-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  border-top-left-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+  opacity: 0.9;
+  filter:alpha(opacity=90); /*For IE8 and earlier*/
+  -moz-opacity:0.9;
+}
+.form-signin
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  border-radius: 6px 6px 6px 6px;;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.alert{
+	position: relative;
+	/*top: 25px;
+	right: 53.5em;*/
+	text-align: center;
+	font-weight: strong;
+	margin: 0;
+	padding: 0;
+}
+
+a.signUp:link {
+	color: #A61C00;
+	text-decoration: underline;
+}
+
+.input-group{
+	margin-bottom: 5px;
+}
+
+
+video#bgvid {
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; height: auto; z-index: -1000;
+	background: url(video/adrift-4_snapshot.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#error{
+	text-align: center;
+	color: red;
+}
+
+h3{
+	margin: 0px;
+	text-align: center;
+	margin-bottom: 30px;
+	
+}
+
+#signButton{
+	margin-bottom: -10px;
+}

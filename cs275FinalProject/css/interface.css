@@ -1,0 +1,122 @@
+body {
+  /*padding-top: 20px;*/
+  padding-bottom: 40px;
+  background-color: #eee;
+  color: black; 
+  font-family: sans-serif, arial;
+  
+	background: url(http://www.htmldog.com/r10/bg.gif) 0 0 fixed;
+	background: -webkit-linear-gradient(rgba(204,229,255,.15), rgba(0,0,0,.3)) fixed, url(http://www.htmldog.com/r10/bg.gif) 0 0 fixed;
+	background: linear-gradient(rgba(204,229,255,.15), rgba(0,0,0,.3)) fixed, url(http://www.htmldog.com/r10/bg.gif) 0 0 fixed;
+}
+
+.container{
+	background-color: #fff;
+}
+
+.leftAlign{
+	float: left;
+	margin-right: 70px;
+}
+
+.centerAlign{
+	float: left;
+	width: 200px;
+	margin-right: 190px;
+}
+
+.rightAlign{
+	float: left;
+	width: 200px;
+}
+
+.floatRight{
+	float: right;
+}
+
+.floatLeft{
+	float: left;
+}
+
+.floatCenter{
+	float: center;
+}
+
+.clearLeft{
+clear: left;
+}
+
+.inLine{
+display: inline;
+}
+
+.form-control{
+	width: 330px;
+}
+
+#delPO{
+	margin-left: 50px;
+}
+
+th, td{
+	text-align: center;
+	/*border-color: blue;*/
+	/*height: 50px;*/
+	/*width: 105px;*/
+	/*text-height: 50px;*/
+}
+
+h2{
+text-align: center;
+font-family: 'Open Sans', arial;
+color: blue;
+font-size: 30px;
+font-weight: 300;
+}
+
+h3{
+text-align: center;
+font-family: 'Open Sans', arial;
+color: blue;
+font-size: 25px;
+font-weight: 300;
+}
+
+h4{
+text-align: center;
+}
+
+#addProductForm{
+	width: 380px;
+	margin: 30px;
+}
+
+#signOutBtn{
+	margin-top: 30px;
+	float: left;
+}
+
+#updateBtn{
+	margin-top: 20px;
+	
+}
+
+#prodTable{
+	margin-top: 50px;
+}
+
+.buttonUpdate, .update_stat{
+	position: relative;
+	text-align: center; 
+}
+
+#costumBtn{
+	margin: 0 auto;
+	width: 400px;
+	position:relative;
+}
+
+#delCustomer{
+	text-align: left;
+	
+}

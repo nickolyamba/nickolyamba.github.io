@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta name="author" content=""/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection" />
+	<title>How to Project: Xamarin</title>
+
+	<!-- WebPage Template made by
+
+	project: interactive media (free css template)
+	author: luka cvrk (www.solucija.com)
+	-->
+
+</head>
+<body id="home">
+	<div class="wrap">
+		<div id="logo">
+			<h1><a href="#" title="Home">How to Project: Xamarin</a></h1>
+			<p>Cross-Platform App Development</p>
+		</div>
+
+		<ul id="nav">
+			<li><a class="current" href="#" accesskey="h"><span class="akey">H</span>ome</a></li>
+			<li><a href="#Result" accesskey="a"><span class="akey">See Result</span></a></li>
+
+		</ul>
+	</div>
+	<div class="wrap">
+		<div id="left"><br><br>
+			<h2 id="About How-To-Project">About How-To-Project</h2>
+
+			<a href="http://xamarin.com/platform">
+				<img align="left" src="images/xamagon.png" width="32px" height="32px">
+			</a>
+			<p> My How-To-Project is devoted to building of new generation
+				native cross-platform applications using Xamarin platform. 
+				The idea behind the Xamarin is to share common code when creating iOS, 
+				Android OS, and Windows OS apps and have native UI, native API access,
+				and native perfomance at the same time.
+			</p>
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rOUAWzxVwX0" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe><br>
+			
+			<!--/--------------------------------- Installation Guide -------------------------------\-->
+			<h2 id="Installation Guide">1. Installation Guide</h2>
+			<p>Please follow to <a href = "http://developer.xamarin.com/guides/android/getting_started/installation/windows/">
+			  getting started page for the Xamarin Platform</a> 
+			  for installtion directives. Installation consists of a few parts and takes a while. 
+			  I noticed lack of feedback during installation and even thought for a moment that installation froze.
+			  Thus, be patient during installation.
+			  <br><br><img src="images/Install.jpg">
+			</p>
+			
+			<!--/--------------------------------------- Configuration of Xamarin ---------------------------\-->
+			<h2 id="Configuration">2. Configuration of Xamarin.</h2>
+			<p>There are two options for creating apps using Xamarin:
+	      <ul>
+	        <li>Visual Studio 2012, or higher</li>
+	        <li>Xamarin Studio</li>
+	      </ul>  
+			</p>
+			
+			<h3>Fixing error opening layout .axml files</h3>
+			<p>I decided to use Visual Studio since it’s a more familiar IDE for me. 
+  			I used a <a href="http://xamarin.com/getting-started/android">starter guide</a> 
+  			to learn the platform. The guide introduces Xamarin.Android 
+  			using a simple app, Tasky. After downloading the app, I launched Android version in Visual Studio 2013. 
+  			When I tried to open HomeScren.axml layout file in the project, Visual Studio crashed. 
+  			Then I tried to open layout file .axml Xamarin Studio, 
+  			and it crashed, too, with the following error message:
+			</p>
+			<img src="images/layout-error.png"><br>
+			
+			<p> I found a Xamarin forum’s 
+  			<a href="http://forums.xamarin.com/discussion/32365/
+  			connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9">post</a>
+  			referred to this error. To solve the problem, I used first approach described in the post. 
+  			I changed Java SDK version to 1.8 in Xamarin Studio options menu
+  		</p>
+  		<br><img src="images/Options-1.png">
+  		<img src="images/Options-2.jpg"><br><br>
+			
+			<P>
+			  It’s a unexpected problem becuase during installation Xamarin required to install 
+			  Java SDK 1.7 and dialog window explained that it will work only with Java SDK 1.7
+			  that is installed automatically during Xamarin setup. The Xamarin website says: 
+			  “It is essential to install the 32-bit version of the Java JDK even if you're using 64-bit Windows. 
+			  It is also important that v1.7 of the Java JDK is installed (although it is fine to have 1.8 or newer 
+			  installed at the same time).” After I pointed to Windows x64 version Java SDK, the error disappeared, 
+			  and layout started working correctly in both Xamarin Studio and Visual Studio 2013.
+			</P><br>
+
+			<!--/--------------------------------------- Running Reusable Cross Platform Library Projects Issue ---------------------------\-->
+			<h3>Running Reusable Cross Platform Library Projects Issue</h3>
+			<p>
+				When I tried to run an <a href="http://developer.xamarin.com/guides/cross-platform/application_fundamentals/
+				pcl/introduction_to_portable_class_libraries/#PCL_Example"> of Cross Platform Library Project</a> 
+  			in the guide, it didn't compile although it is being built without issues. The project consists of
+  			three sub-project (each for an OS). I had only Android device to test on. The error was ambiguous:
+			</p>
+			<img src="images/run_cross_platform_error.jpg"><br>
+			<p>
+				I was sure that you can run the app on one device even if you can test only one OS. In my case
+				I had only Android device at hands. After tinkering for a while, 
+				I found out that iOS project was set as a Startup Project 
+				by default, so the fix was to choose Android OS as a Startup Project instead. So be sure
+				to set project as a Startup Project according to your device. 
+			</p>
+			<img src="images/startup_default.jpg"><br>
+			
+
+			
+			<!--/--------------------------------------- Emulator Devices ---------------------------\-->
+			<h2 id="Emulator Devices">3. Emulator Devices</h2><br>
+			<ul style="font-size: 13pt">
+				<li> 
+					iOS: If you expect to use iOS emulator, it’s not possible. Only native iOS device connected 
+					to your Windows or Linux can be used to run applications. 
+					<a href="http://developer.xamarin.com/guides/ios/
+					  getting_started/installation/windows/">Explnation is here
+					</a>
+				</li>
+				<li> 
+					Windows phone emulator requires Windows 8.1
+				</li>
+				<li> 
+					<a href="https://www.genymotion.com/#!/download">Genymotion</a>:emulator that’s much faster 
+					 than Android Emulator by Google. Run Genymotion before opening Xamarin Studio 
+					 or Visual Studio in order to let it be found.
+				</li>
+			</ul>
+			<p>Since I don’t have iOS device and have Windows 7, I couldn’t try Xamarin on iOS and Windows OS phones. 
+			   Therefore, I experimented only with Android. However, these experiments are appliocable for other OS 
+			   because some application may share up to 100% of C# code, according to Xamarin.
+			</p>
+			
+
+			<!--/--------------------------------------- Web Request ---------------------------\-->
+			<h2 id="Web Request">4. Cross-Platform HTTP Request using Shared Project</h2><br>
+			<p>
+				 There are <a href="http://developer.xamarin.com/guides/cross-platform/application_fundamentals/
+				 building_cross_platform_applications/sharing_code_options">two options</a> 
+				 of creating Cross-Platform native app:
+			</p>
+			<ul style="font-size: 13pt">
+				<li> 
+					Using PCL (Portable Class Library).
+					According to the <a href="http://developer.xamarin.com/guides/cross-platform/application_fundamentals/
+				  pcl/introduction_to_portable_class_libraries/#Creating_A_PCL">Xamarin's guide</a>,
+				  there must be "Portable Class Library" when creating new project in Visual Studio 2013.
+				  However, I haven't found it. Instead there is a Class Library (Portable) that you should
+				  select to create PCL for your project:
+				  <img src="images/portable.jpg"><br><br>
+				</li>
+				<li> 
+					Another options is <a href="http://developer.xamarin.com/guides/cross-platform/application_fundamentals/
+					building_cross_platform_applications/sharing_code_options/#Shared_Projects">
+					  Shared Projects</a> 
+				</li>
+			</ul>
+			
+			<p>
+				 I could not find example of the http request that uses RESTful Web API in the Shared Project 
+				 portable Xamarin app.
+				 There is one <a href="http://developer.xamarin.com/recipes/android/web_services/
+				 consuming_services/call_a_rest_web_service/">example </a> that utilizes RESTful API in 
+				 Xamarin.Android platform; however code is not portble since written specifically for Android.
+				 Another useful example I have used is this <a href="https://msdn.microsoft.com/en-us/library/
+				 dn879698(v=vs.140).aspx#solution">walkthrough</a>
+			</p><br>
+			
+      <p>
+				 Here I will create Shared Project where all the buisness logic is shared between platfroms.
+				 The only unshared code between platforms is UI.Beacuse I can test it on Android OS, I created
+				 only Android UI that uses the shared code.
+			</p>
+			
+			 <p>
+          <h1 id="Creating Project">Steps:</h1>
+			</p>
+			
+			<ol style="font-size: 13pt">
+				<li> 
+					Create Blank Android Project as descibed 
+					<a href="http://developer.xamarin.com/guides/android/getting_started/
+					hello,android/hello,android_quickstart/">here</a>. I named my app
+					"RESTfulApp" since I'm going to make http request using RESTful API created by
+					me for previous homework.
+				</li><br>
+				
+				<li> 
+					Add empty Shared Project to the solution as shown below. Call it "Shared"
+				  <img src="images/shared1.jpg"><br><br>
+				</li><br>
+				
+				<li> 
+					Add reference to the created Shared Project into RestfulApp
+				  <img src="images/shared2.jpg">
+				  <img src="images/shared3.jpg">
+				</li><br>
+
+				<li> 
+					Add reference to the created Shared Project into RestfulApp
+				  <img src="images/shared2.jpg">
+				  <img src="images/shared3.jpg">
+				  <img src="images/shared4.jpg">
+				</li><br>
+				<li> 
+					Intall and add reference to Newtonsoft.JSON packet to deserialize json
+				  <img src="images/newton1.jpg">
+				  <img src="images/newton2.jpg">
+				</li><br>
+				<li> 
+					Add reference to MSCSharp
+				  <img src="images/csharp.jpg">
+				</li><br>
+				
+				<p>
+          <h1 id="Shared Code">Writing Shared Code</h1>
+			  </p>
+				<li> 
+					Now we should create Supplier class in the Shared
+				  <img src="images/supplierClass.jpg">
+				</li><br>
+				
+				<li> 
+					Then we need to create class that is responsible for fetching
+					data using <a href="http://developer.xamarin.com/guides/cross-platform/
+					application_fundamentals/web_services/">HttpWebRequest</a>. Let's call
+					the class "DataService" and include the only function that is called
+					asynchronously from the main UI thread. Since we are going to deserialize
+					Json response, don't forget to include "using Newtonsoft.Json;"
+					The function returns deserialized object that will be processed in another
+					class we will create called "Query".
+				  <img src="images/dataService.jpg">
+				  Json response has the following format:
+				  <img src="images/jsonFormat.jpg">
+				</li><br>
+				
+				<li> 
+					At the next step we will create Query class that is responsible
+					for parsing the data from deseirialized Json and saving it into Supplier objects
+					that populate list of supplier objects and returned to the main UI thread.
+				  <img src="images/query.jpg">
+				</li><br>
+				
+				<p>
+          <h1 id="UICode">Writing Non-Shared UI Code</h1>
+			  </p>
+				<li> 
+					Now we are ready to create Android UI that consume the data that the shared code provides. 
+					To show the fetched data, we should
+					create ListView object and populate it via ArrayAdapter with list
+					of strings where each string will contain one supplier's data. A good tutorial for creating
+					ListView in C# can be found <a href="http://www.jon-douglas.com/2014/01/
+					xamarin-android-listviews/">here</a>
+				  <img src="images/mainActivity.jpg">
+				</li><br>
+				
+				<li> 
+				  Here what is how the result of the work should look like:
+          <video 
+            autoplay="" 
+            preload="auto" 
+            loop="" 
+            poster="images/result2.jpg" 
+            id="Result" 
+            width="520" height="844" 
+            controls>
+      		  <source src="images/video.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+      		  <source src="images/video.mp4" type="video/mp4">
+          </video>
+				</li>
+			</ol>
+			
+		</div>
+		
+		
+		<div id="right">
+			<h2>Content</h2>
+			<ul style="font-size: 14pt">
+				
+				<li><a href="#Installation Guide">Installation Guide</a></li>
+				<li><a href="#Configuration">Configuration of Xamarin</a></li>
+				<li><a href="#Emulator Devices">Emulator Devices</a></li>
+				<li><a href="#Web Request">Cross-Platform HTTP Request</a></li>
+				<ul id="under" style="font-size: 10pt">
+					<li><a href="#Creating Project">Creating Project</a></li>
+					<li><a href="#Shared Code">Shared Code</a></li>
+					<li><a href="#UICode">UI Code</a></li>
+					<li><a href="#Result">Result</a></li>
+				</ul>
+			</ul>
+
+			<h2>Useful Links</h2>
+			<div id="tagcloud">
+				<p style="font-size: 14pt">
+					<span><a href="http://xamarin.com/platform">Xamarin Platform Page</a></span><br><br>
+					<span><a href="http://developer.xamarin.com/guides/android/getting_started/installation/windows/">Installation</a></span><br><br>
+					<span><a href="http://xamarin.com/getting-started/android">Getting Started</a></span><br><br>
+					<span><a href="https://www.genymotion.com/#!/download">
+					  Genymotion Emulator</a></span><br><br>
+					<span><a href="http://developer.xamarin.com/guides/cross-platform/application_fundamentals/web_services/">REST HTTP Request in Xamarin</a></span><br><br>
+					<span><a href="http://developer.xamarin.com/guides/cross-platform/application_fundamentals/
+				    pcl/introduction_to_portable_class_libraries/#Creating_A_PCL">Portable Class Library (PCL)</a></span><br><br>
+					<span><a href="http://developer.xamarin.com/guides/android/user_interface/working_with_listviews_and_adapters/part_2_-_populating_a_listview_with_data/">
+					  ListView in Android</a></span><br><br>
+				</p>
+			</div>
+			
+		<div id="footer">
+			<p><a href="#">Go Up</a> &middot; <a href="#Installation Guide">Installation Guide</a> &middot; <a href="#Web Request">Cross-Platform HTTP Request</a> &middot; <a href="#Shared Code">#Shared Code</a> &middot; <a href="#Result">Result</a> &middot;
+			<p>Template Design: Luka Cvrk, <a title="Awsome Web Templates" href="http://www.solucija.com/">www.solucija.com</a></p>
+		</div>
+		
+	</div>
+</body>
+</html>

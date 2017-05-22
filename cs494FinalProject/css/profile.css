@@ -1,0 +1,100 @@
+body {
+	/*padding-top: 20px;*/
+	padding-bottom: 40px;
+	background-color: #eee;
+	font-family: sans-serif;
+	
+    /*background: url(../images/bg.jpg) repeat;*/
+    
+  
+}
+
+.container{	
+   
+}
+
+
+.form-inline .form-control{
+	width: 120px;
+}
+
+.form-group{
+	width: 139px;
+}
+
+/*
+.form-control{
+	max-width: 90px;
+	margin: 0 auto;
+	margin-top: -5px;
+	margin-bottom: -17px;
+	max-height: 30px;
+}*/
+/*
+.form-update{
+  max-width: 500px;
+  padding: 0px;
+  margin: 0 auto;
+  float: left;
+  
+}*/
+.form-update .form-update-heading,
+  /*margin-bottom: 10px;*/
+}
+/*
+.form-update .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+/*  padding: 10px;*/
+  font-size: 16px;
+}
+
+.form-update .form-control:focus {
+  z-index: 2;
+}
+/*
+.form-update input[type="userName"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-update input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}*/
+
+th, td{
+	text-align: center;
+	/*height: 50px;*/
+	/*width: 105px;*/
+	text-height: 50px;
+}
+
+h1 {
+text-align: center;
+font-family: 'Open Sans', arial;
+color: #555;
+font-size: 30px;
+font-weight: 300;
+margin-top: -10px;
+margin-bottom: 10px;
+}
+
+#signOutBtn{
+	margin-top: 30px;
+	float: left;
+}
+
+#updateBtn{
+	margin-top: 20px;
+	
+}
+
+.buttonUpdate, .update_stat{
+	position: relative;
+	text-align: center; 
+}

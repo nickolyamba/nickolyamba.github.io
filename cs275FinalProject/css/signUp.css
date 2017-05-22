@@ -1,0 +1,128 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  font-family: sans-serif;
+}
+
+.form_signUp{
+  max-width: 350px;
+  padding: 10px;
+  padding-bottom: 0;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  background-color: #eee;
+  /*background-color: rgba(238, 238, 238, 0.8);*/
+  /*border-radius: 40%, 40%, 40%, 40%;*/
+  border-top-right-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  border-top-left-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+  opacity: 0.9;
+  filter:alpha(opacity=90); /*For IE8 and earlier*/
+  -moz-opacity:0.9;
+}
+
+#isAvailable{
+  max-width: 330px;
+  /*padding: 15px;*/
+  margin: 0 auto;
+  /*margin-top: 50px;*/
+  /*border: solid gray 1px;*/
+  background-color: #eee;
+}
+/*
+.form_signUp-heading
+{
+	float: center;
+	margin-bottom: 10px;
+	
+}*/
+
+.form_signUp,
+.form_signUp {
+  margin-bottom: 10px;
+}
+.form_signUp .checkbox {
+  font-weight: normal;
+}
+.form_signUp .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form_signUp .form-control:focus {
+  z-index: 2;
+}
+.form_signUp input[type="userName"] {
+  margin-bottom: -1px;
+
+}
+.form_signUp input[type="password"] {
+  margin-bottom: 10px;
+}
+
+.form-group 
+{
+	background-color: rgba(238, 238, 238, 1.0);
+}
+
+h4 {
+text-align: center;
+font-family: 'Open Sans', arial;
+color: #555;
+font-size: 25px;
+font-weight: 300;
+/*margin-top: 27px;
+margin-bottom: 20px;*/
+}
+
+.avail{
+	/*position: relative;*/
+	/*top: 25px;
+	right: 53.5em;*/
+	/*font-weight: strong;*/
+	color: green;
+	margin-bottom: 4px;
+	padding: 0;
+	float: center;
+	display: inline-block;
+}
+
+.notAvail{
+	/*position: relative;*/
+	/*top: 25px;
+	right: 53.5em;*/
+	/*font-weight: strong;*/
+	color: red;
+	margin-bottom: 4px;
+	padding: 0;
+	float: center;
+	display: inline-block;
+}
+
+video#bgvid {
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; height: auto; z-index: -1000;
+	background: url(video/sf_snapshot.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#error{
+	color: red;
+	text-align: center;
+}
+/*
+opacity:0.5;  
+    filter:alpha(opacity=50);  
+    -moz-opacity:0.5;  */

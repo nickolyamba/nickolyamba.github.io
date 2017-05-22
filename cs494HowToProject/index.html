@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+
+	<meta name="author" content=""/>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection" />
+
+	<title>How to Project: Polymer</title>
+
+
+
+	<!-- WebPage Template made by
+
+
+
+	project: interactive media (free css template)
+
+	author: luka cvrk (www.solucija.com)
+
+	-->
+
+
+
+</head>
+
+<body id="home">
+
+	<div class="wrap">
+
+		<div id="logo">
+
+			<h1><a href="." title="Home">How to Project: Polymer</a></h1>
+
+			<p>Technology of the future: everything is an element</p>
+
+		</div>
+
+
+
+		<ul id="nav">
+
+			<li><a class="current" href="." accesskey="h"><span class="akey">H</span>ome</a></li>
+
+			<li><a href="#result" accesskey="a"><span class="akey">Go to Bottom</span></a></li>
+
+
+
+		</ul>
+
+	</div>
+
+	<div class="wrap">
+
+		<div id="left"><br><br>
+
+			<h2 id="About How-To-Project">About How-To-Project</h2>
+
+
+
+			<a href="http://www.polymer-project.org/">
+
+				<img align="right" src="images/polymerLogo.svg">
+
+			</a>
+
+			<p> My How-To-Project is devoted to building of new generation
+
+				web applications using Polymer. Polymer is a new web user interface (UI)
+
+				framework that is currently developed by Google.The idea behind the polymer project 
+
+				is encapsulation of code inside of custom elements that can be reused and either
+
+				extended, or customized later. It brings true OOP techniques in the web development.
+
+				Please watch the video below to get basic idea of the project. </p>
+
+
+
+			<iframe 
+
+				width="560" height="315" src="www.youtube.com/embed/VMVj_jR75vE" 
+
+				frameborder="0" 
+
+				allowfullscreen>
+
+			</iframe><br><br><br>
+
+			
+
+			<h2 id="Installation Guide">Installation Guide</h2>
+
+			<p>Please follow to <a href = "http://www.polymer-project.org/docs/start/getting-the-code.html">the main page of the Polymer Project</a> for installtion directives. Here, I would like
+
+			to uncover crucial stages that are not very clear in the installation guide and may prevent
+
+			a potential a user from succesfully using the framework.
+
+			</p>
+
+			<ul style="font-size: 10pt">
+
+				<li> 
+
+					To <a href = "http://bower.io/">install Bower</a>, you only need <a href="http://git-scm.com/downloads">git</a> and <a href="http://nodejs.org/">node.js</a> to be installed. There is no need to install npm as described on Bower page since it's
+
+					installed with node.js simultaneously
+
+				</li>
+
+				<li> 
+
+					After you are done with bower and installed, polymer framework, I don't recommend
+
+					to install all Polymer’s collection of pre-built elements as described in <a href="http://www.polymer-project.org/docs/start/getting-the-code.html#getting-our-elements"> the Polymer's Guide </a> since it takes about 40Mb of space with no use. Also, it's simply difficult to locate the elements you need among the pile of element's folders. Instead, I recommend to use custom installation of elements you would like
+
+					to use, as described <a href="http://www.polymer-project.org/docs/start/usingelements.html#installsingle">here</a>.
+
+				</li>
+
+				<li> 
+
+					When you done with downloading custom elements and ready to create your first .html file,
+
+					that uses Polymer, it's very important to load platform.js as a first statement in
+
+					the &lt;head&gt; of the document. Failure to do so may lead to an empty page.
+
+					<br><img src="images/platform-loadFailure2.jpg">
+
+					<br><br><img src="images/platform-loadFailure1.jpg">
+
+				</li>
+
+				<li>
+
+					While building your custom element, read carefully the article
+
+					<a href="http://www.polymer-project.org/docs/start/creatingelements.html#createpolyel">Creating Elements</a> of the official guide and note that custom elements
+
+					must contain "<b>-</b>" in the name attribute. Also, noscript attribute must be
+
+					included in declaration. Failure to follow these notes lead to failure of the web
+
+					app. Your custom elements should be saved in the folder "elements" as in the
+
+					screenshot below.
+
+					<br><img src="images/folderLook.jpg">
+
+				</li>
+
+			</ul><br>
+
+
+
+			<h2 id="XhrHttpRequest">XhrHttpRequest using &lt;polymer-ajax&gt element</h2>
+
+			<p id="documentation">
+
+				To perform XMLHttpRequests, &lt;polymer-ajax&gt element is getting very handy.
+
+				Please read documentation about this element 
+
+				<a href="http://www.polymer-project.org/docs/elements/polymer-elements.html">here</a>
+
+				and install it using Bower.
+
+				However, I prefer to read documentation inside the polymer-ajax.html since
+
+				it provides the full description of the element atributes, parameters and 
+
+				methods. See the provided atributes below.
+
+				<br><br><img src="images/polymer-ajaxFile.jpg"><br><br>
+
+				If you go lower inside the file you'll see that as soon as the element ready, it
+
+				creates instance of another element called &lt;polymer-ajax&gt that actually 
+
+				makes the XMLHttpRequestand is imported into &lt;polymer-ajax&gt through HTML import.
+
+				<br><img src="images/polymer-ajaxFile2.jpg"><br>
+
+			</p>
+
+
+
+			<p>
+
+				Now, when you know the documentation, let's use the &lt;polymer-ajax&gt element
+
+				to find out the most popular YouTube videos in the US for today. To do this let's
+
+				first do HTML import of the downloaded &lt;polymer-ajax&gt element:
+
+				<br><img src="images/import-1.jpg">
+
+				Also, note that the platform.js is imported before import of polymer-ajax.html.
+
+			</p>
+
+
+
+
+
+			<p id="request">
+
+				Now you are ready to add &lt;polymer-ajax&gt and do XMLHttpRequest. You need to insert the element and define the atributes. If you follow the link for 
+
+				<a href="https://developers.google.com/youtube/2.0/developers_guide_protocol_video_feeds#Standard_feeds">
+
+				YouTube API v2.0 – Video Feed Types</a>, 
+
+				you will find the url feed for most popular videos. Usually, it's
+
+				not permitted to make XMLHttpRequest the request using ajax call on another server;
+
+				however, we request not for ".json" but for the "json-in-script" that is decoded using
+
+				call back function. We don't see it since it happens internally in &lt;polymer-xhr&gt
+
+				element. Therefore, we use "json" as value of "alt" parameter.
+
+				<br><img src="images/xhr-request.jpg">
+
+			</p>
+
+
+
+			<p id="traversing">
+
+				The next step is retrieving data from the feed. I ended up finding
+
+				feed varibales <a href="https://developers.google.com/youtube/2.0/reference#youtube_data_api_tag_feed">here</a>. I chose the following parameters
+
+				in the feed: title.$t and published.$t. $t is used to invoke the variables
+
+				in google feeds. One of the great feature of the &lt;template&gt element is that
+
+				you can use it for <a href="http://www.polymer-project.org/docs/polymer/databinding.html#template">data binding and traversing</a> through either object or array.
+
+				You can use it to traverse through "response.feed.entry" object as described below:
+
+				<br><img src="images/traversing.jpg">
+
+			</p>
+
+
+
+			<p id="script">
+
+				The last step is writing a script that fires polymer-element event and responds
+
+				on it like in the <a href="http://www.polymer-project.org/docs/start/usingelements.html#using">example in polymer documentation</a>. The first line of the script 
+
+				provides reigistration of the event listener on the DOM <b>Document</b> when polymer
+
+				element is ready. &lt;polymer-ajax&gt element is aiisgned to var ajax on the second line.
+
+				On the following lines, it responds to the event it fires and identifies the event with the model data used to generate the template instance to update the model data as
+
+				described <a href="http://www.polymer-project.org/docs/polymer/databinding.html">
+
+				here</a>.
+
+
+
+				<br><img src="images/eventListener.jpg">
+
+			</p>
+
+
+
+			<p id="result">
+
+				As a result of our hard work, we get the following table.
+
+				<br><img src="images/result.jpg">
+
+			</p>
+
+
+
+
+
+
+
+			<h2 id="Create a custom element">Homework 1 as one element</h2>
+
+			<p id="documentation">
+
+				Please see below screenshots of hw-2 as one element. 
+
+				<br><img src="images/hw-2.jpg">
+
+				<br><img src="images/hw-1.jpg">
+
+			</p>
+
+
+
+
+
+
+
+		</div>	
+
+		<div id="right">
+
+			<h2>Content</h2>
+
+			<ul style="font-size: 14pt">
+
+				
+
+				<li><a href="#About How-To-Project">About How-To-Project</a></li>
+
+				<li><a href="#Installation Guide">Installation Guide</a></li>
+
+				<li><a href="#XhrHttpRequest">XhrHttpRequest</a></li>
+
+				<ul id="under" style="font-size: 10pt">
+
+					<li><a href="#documentation">Documentation</a></li>
+
+					<li><a href="#request">Request</a></li>
+
+					<li><a href="traversing">Traversing</a></li>
+
+					<li><a href="#script">Writing Script</a></li>
+
+				</ul>
+
+			</ul>
+
+
+
+			<h2>Useful Links</h2>
+
+			<div id="tagcloud">
+
+				<p style="font-size: 14pt">
+
+					<span><a href="http://www.polymer-project.org/">Polymer Project Page</a></span><br><br>
+
+					<span><a href="http://www.polymer-project.org/docs/elements/polymer-elements.html">Polymer Elements</a></span><br><br>
+
+					<span><a href="http://www.polymer-project.org/docs/elements/polymer-ui-elements.html">Polymer UI Elements</a></span><br><br>
+
+					<span><a href="http://www.polymer-project.org/docs/polymer/polymer.html">
+
+					Polymer API Reference</a></span><br><br>
+
+					<span><a href="http://bower.io/">Bower: a package manager</a></span><br><br>
+
+					<span><a href="http://git-scm.com/downloads">git</a></span><br><br>
+
+					<span><a href="http://nodejs.org/">node.js</a></span><br><br>
+
+				</p>
+
+			</div>
+
+			<!--<p id="info">If you liked this template, you might like some other CSS templates from <a href="http://www.solucija.com" title="Information Architecture and Web Design">Solucija</a>!</p>-->
+
+		</div>
+
+		<div id="footer">
+
+			<p><a href="#">Go Up</a> &middot; <a href="#Installation Guide">Installation Guide</a> &middot; <a href="#XhrHttpRequest">XhrHttpRequest</a> &middot; <a href="#documentation">Documentation</a> &middot; <a href="#request">Request</a> &middot;
+
+			<p>Template Design: Luka Cvrk, <a title="Awsome Web Templates" href="http://www.solucija.com/">www.solucija.com</a></p>
+
+		</div>		
+
+	</div>
+
+</body>
+
+</html>
+
