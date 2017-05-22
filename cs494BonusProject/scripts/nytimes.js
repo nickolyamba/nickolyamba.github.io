@@ -60,7 +60,7 @@ $(function() {
 			
 			$.ajax({
 				  type: "GET",
-				  url: 'http://api.nytimes.com/svc/search/v2/articlesearch.json',
+				  url: 'https://api.nytimes.com/svc/search/v2/articlesearch.json',
 				  data: dataString,
 				  
 				  success: function(result, textStatus, xhr) {
