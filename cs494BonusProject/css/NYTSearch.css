@@ -1,183 +1,183 @@
-body , div, input, button
-{
-	font-family: sans-serif;
-	font-size: 12pt;
-}
-
-#mainBox{
-	text-align: center; 
-	width:1000px;
-	padding:10px;
-	border:2px solid gray;
-	
-	margin-left: auto;
-    margin-right: auto;
-}
-
-#secondaryBox{
-	text-align: center; 
-	width:950px;
-	padding:10px;
-	
-	margin-left: auto;
-    margin-right: auto;
-}
-
-#searchTerm
-{
-	width:950px;
-	margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    height: 30px;
-    border-top-right-radius: 5px 5px;
-	border-bottom-right-radius: 5px 5px;
-	border-top-left-radius: 5px 5px;
-	border-bottom-left-radius: 5px 5px;
-	background: #D9E9FA;
-
-}
-
-.button{
-	margin-top: 10px;
-	color: #ffffff;
-	border: solid 1px #0076a3; border-right:0px;
-	background: #0095cd;
-	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
-	border-top-right-radius: 5px 5px;
-	border-bottom-right-radius: 5px 5px;
-	border-top-left-radius: 5px 5px;
-	border-bottom-left-radius: 5px 5px;
-
-}
-
-#searchButton{
-	width: 950px;
-	height: 40px;
-	/*font-weight: bold;*/
-}
-
-.button:hover {
-	text-decoration: none;
-	background: #007ead;
-	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
-	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
-}
-
-#beginDate{
-	width: 400px;
-	float: left;
-	height: 30px;
-	border-top-right-radius: 5px 5px;
-	border-bottom-right-radius: 5px 5px;
-	border-top-left-radius: 5px 5px;
-	border-bottom-left-radius: 5px 5px;
-	background: #D9E9FA;
-	
-
-	
-}
-#endDate{
-	width: 400px;
-	text-align: left;
-	float: right;
-	height: 30px;
-	border-top-right-radius: 5px 5px;
-	border-bottom-right-radius: 5px 5px;
-	border-top-left-radius: 5px 5px;
-	border-bottom-left-radius: 5px 5px;
-	background: #D9E9FA;
-	
-}
-
-
-.heading {
-	font-family: Old English Text MT;
-	font-size: 25pt;
-	font-weight: bold;
-	/*color: #0078a5;*/
-	margin-bottom: 15pt;
-	text-align: center;
-}
-
-	
-.poweredby {
-	margin:0 auto;
-}
-
-#pageNumber, #pageNumberBottom{
-	/*border: 1px solid gray;
-	padding-bottom: 5pt;*/
-	padding-top: 5pt;
-	border-top-right-radius: 5px 5px;
-	border-bottom-right-radius: 5px 5px;
-	border-top-left-radius: 5px 5px;
-	border-bottom-left-radius: 5px 5px;
-	font-weight: bold;
-	width: 75px;
-	height: 30px;
-	margin:0 auto;
-	float: center;
-	display: inline-block;
-}
-
-#prevPageButton, #nextPageButton
-{
-	/*position: relative;
-	bottom: 1px;*/
-	float: center;
-	display: inline-block;
-	/*margin: 0 auto;*/
-	height: 30px;
-	/*font-weight: bold;*/
-	
-
-}
-
-
-.news{
-	border: 1px solid gray;
-	/*padding-bottom: 10pt;
-	padding-top: 10pt;*/
-	border-top-right-radius: 5px 5px;
-	border-bottom-right-radius: 5px 5px;
-	border-top-left-radius: 5px 5px;
-	border-bottom-left-radius: 5px 5px;
-	background: #D9E9FA;
-	height: 40px;
-	line-height: 40px;
-}
-
-#beginDate + img.ui-datepicker-trigger {
-      position: relative;
-      left: -30px;
-      top: 4px;
-      float: left;
-}
-
-
-.ui-datepicker-trigger
-{
-        padding:0px;
-        padding-left:0px;
-        vertical-align:baseline;
-
-        position:relative;
-        top:4px;
-        height:28px;
-}
-
-#endDate + img.ui-datepicker-trigger {
-      position: relative;
-      left: 30.5em;
-      top: 4px;
-      float: left;
-}
-/*
-#forBackground{
-background-image:  url("images/background-2.jpg");
-background-size: 500px;
-}*/
-
-
+body , div, input, button
+{
+	font-family: sans-serif;
+	font-size: 12pt;
+}
+
+#mainBox{
+	text-align: center; 
+	width:1000px;
+	padding:10px;
+	border:2px solid gray;
+	
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#secondaryBox{
+	text-align: center; 
+	width:950px;
+	padding:10px;
+	
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#searchTerm
+{
+	width:950px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    height: 30px;
+    border-top-right-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+	background: #D9E9FA;
+
+}
+
+.button{
+	margin-top: 10px;
+	color: #ffffff;
+	border: solid 1px #0076a3; border-right:0px;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	border-top-right-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+
+}
+
+#searchButton{
+	width: 950px;
+	height: 40px;
+	/*font-weight: bold;*/
+}
+
+.button:hover {
+	text-decoration: none;
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+}
+
+#beginDate{
+	width: 400px;
+	float: left;
+	height: 30px;
+	border-top-right-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+	background: #D9E9FA;
+	
+
+	
+}
+#endDate{
+	width: 400px;
+	text-align: left;
+	float: right;
+	height: 30px;
+	border-top-right-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+	background: #D9E9FA;
+	
+}
+
+
+.heading {
+	font-family: Old English Text MT;
+	font-size: 25pt;
+	font-weight: bold;
+	/*color: #0078a5;*/
+	margin-bottom: 15pt;
+	text-align: center;
+}
+
+	
+.poweredby {
+	margin:0 auto;
+}
+
+#pageNumber, #pageNumberBottom{
+	/*border: 1px solid gray;
+	padding-bottom: 5pt;*/
+	padding-top: 5pt;
+	border-top-right-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+	font-weight: bold;
+	width: 75px;
+	height: 30px;
+	margin:0 auto;
+	float: center;
+	display: inline-block;
+}
+
+#prevPageButton, #nextPageButton
+{
+	/*position: relative;
+	bottom: 1px;*/
+	float: center;
+	display: inline-block;
+	/*margin: 0 auto;*/
+	height: 30px;
+	/*font-weight: bold;*/
+	
+
+}
+
+
+.news{
+	border: 1px solid gray;
+	/*padding-bottom: 10pt;
+	padding-top: 10pt;*/
+	border-top-right-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+	background: #D9E9FA;
+	height: 40px;
+	line-height: 40px;
+}
+
+#beginDate + img.ui-datepicker-trigger {
+      position: relative;
+      left: -30px;
+      top: 4px;
+      float: left;
+}
+
+
+.ui-datepicker-trigger
+{
+        padding:0px;
+        padding-left:0px;
+        vertical-align:baseline;
+
+        position:relative;
+        top:4px;
+        height:28px;
+}
+
+#endDate + img.ui-datepicker-trigger {
+      position: relative;
+      left: 30.5em;
+      top: 4px;
+      float: left;
+}
+/*
+#forBackground{
+background-image:  url("images/background-2.jpg");
+background-size: 500px;
+}*/
+
+
