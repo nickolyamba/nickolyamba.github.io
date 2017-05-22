@@ -38,8 +38,7 @@ $(function() {
 			if(searchTerm == '' || beginDate == '' || endDate == '')
 			{
 				 $("#newsItem0").empty();
-				 $("#newsItem0").append("Input Error! Search requires \
-										keyword and a range of dates!");
+				 $("#newsItem0").append("Input Error! Search requires keyword and a range of dates!");
 				return;
 			}
 			
